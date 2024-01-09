@@ -1,0 +1,11 @@
+<div class="existing-blog-posts">
+  {{#each blogPosts as |blogPost|}}
+  <div class="post">
+    <h1 class="title">{{blogPost.title}}</h1>
+    <p class="dateCreated">{{blogPost.dateCreated}}</p>
+  </div>
+  {{/each}}
+</div>
+
+{{!-- might need to add .js to the src path --}}
+<script src="/js/show-post"></script>
