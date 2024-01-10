@@ -1,11 +1,14 @@
-<div class="existing-blog-posts">
+<section class="existing-blog-posts">
+  <div>
+    <h1>Home</h1>
+  </div>
   {{#each blogPosts as |blogPost|}}
-  <div class="post">
-    <h1 class="title">{{blogPost.title}}</h1>
-    <p class="dateCreated">{{blogPost.dateCreated}}</p>
+  <div class="post-simple">
+    <h2 class="title">{{blogPost.title}}</h2>
+    <p id="timestamp">{{blogPost.timestamp}}</p>
   </div>
   {{/each}}
-</div>
+</section>
 
 {{!-- might need to add .js to the src path --}}
 <script src="/js/show-post"></script>

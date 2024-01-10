@@ -1,13 +1,11 @@
-<div class="existing-blog-posts">
-  {{#each blogPosts as |blogPost|}}
-  <div class="post">
-    <h1 class="title">{{blogPost.title}}</h1>
+<section class="existing-blog-posts">
+  <div class="post-detailed">
+    <h2 class="title">{{blogPost.title}}</h2>
     <p class="content">{{blogPost.content}}</p>
     <p class="username">{{blogPost.username}}</p>
-    <p class="dateCreated">{{blogPost.dateCreated}}</p>
+    <p id="timestamp">{{blogPost.timestamp}}</p>
   </div>
-  {{/each}}
-</div>
+</section>
 
 {{!-- might need to add .js to the src path --}}
 <script src="/js/comment-post"></script>
