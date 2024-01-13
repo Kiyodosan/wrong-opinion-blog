@@ -2,13 +2,14 @@
   <div>
     <h1>Dashboard</h1>
   </div>
-  <div>
-    {{if blogPosts}}
-    {{#each blogPosts as |blogPost|}}
-
-    {{/each}}
-    {{/if}}
-  </div>
+  {{if blogPosts}}
+  {{#each blogPosts as |blogPost|}}
+  <article>
+    <h2 class="title">{{blogPost.title}}</h2>
+    <p id="timestamp">{{blogPost.timestamp}}</p>
+  </article>
+  {{/each}}
+  {{/if}}
 </section>
 
 <script src="/js/edit-post"></script>

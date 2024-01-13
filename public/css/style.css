@@ -1,0 +1,140 @@
+:root {
+  --primary: #039be5;
+  --primary-hover: #0288d1;
+  --primary-focus: rgba(3, 155, 229, 0.125);
+  --primary-inverse: #FFF;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.text-black {
+  color: black;
+}
+
+.text-size-1p5 {
+  font-size: 1.5rem;
+}
+
+.sr-only {
+  visibility: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  overflow-x:hidden;
+}
+
+.bg-image {
+  background-image: url('assets/images/hs-bg-image.jpg');
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* primary header */
+.nav-logo {
+  margin: 2rem;
+  width: 3rem;
+}
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.primary-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: hsl(0 0% 0% / 0.5);
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-nav {
+    background-color: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+  }
+}
+
+.primary-nav a {
+  text-decoration: none;
+}
+
+.primary-nav a > [aria-hidden="true"] {
+  font-weight: 700;
+  margin-inline-end: .75em;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+@media (max-width: 35em) {
+  .primary-nav {
+    --gap: 2rem;
+
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2rem;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-out;
+  }
+
+  .primary-nav[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background-color: transparent;
+    background-image: url('assets/images/icons8-menu.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2rem;
+    border: 0;
+    aspect-ratio: 1;
+    top: 3rem;
+    right: 2rem;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url('assets/images/icons8-cancel.svg');
+  }
+}
+
+@media (min-width: 35em) {
+  .primary-nav {
+    --gap: clamp(1.5rem, 5vw, 3rem);
+    padding-block: 1rem;
+    padding-inline: clamp(3rem, 7vw, 10rem);
+  }
+}

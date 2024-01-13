@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/nav.js" defer></script>
+</head>
+
+<body class="bg-image">
+  <header class="primary-header flex">
     <div>
-      <header>
-        <p class="navbar" id="logo"></p>
-        <nav class="navbar">
-          <p>Home</p>
-          <p>Dashboard</p>
-          <p>Login</p>
-        </nav>
-      </header>
-      <main>{{{body}}}</main>
+      <img src="../../assets/images/Kiyodo Logo - Watermark Ver. (150x150).jpg" alt="brand logo" class="nav-logo">
     </div>
-  </body>
+  
+    <button class="mobile-nav-toggle fill" aria-controls="primary-nav" aria-expanded="false">
+      <span class="sr-only">Menu</span>
+    </button>
+  
+    <nav>
+      <ul id="primary-nav" data-visible="false" class="primary-nav flex">
+        <li class="active">
+          <a href="index.html" class="text-black text-size-1p5">Home</a>
+        </li>
+        <li>
+          {{#if loggedIn}}
+          <button class="no-button" id="logout">Logout</button>
+          {{else}}
+          <a href="login.html" class="text-black text-size-1p5">Login</a>
+          {{/if}}
+        </li>
+        <li>
+          <a href="account.html" class="text-black text-size-1p5">Account</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">{{{body}}}</main>
+
+  {{#if loggedIn}}
+  <script src="../../public//js/logout.js"></script>
+  {{/if}}
+</body>
 </html>
