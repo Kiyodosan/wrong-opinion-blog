@@ -16,24 +16,24 @@
       <img src="../../assets/images/Kiyodo Logo - Watermark Ver. (150x150).jpg" alt="brand logo" class="nav-logo">
     </div>
   
-    <button class="mobile-nav-toggle fill" aria-controls="primary-nav" aria-expanded="false">
+    <button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false">
       <span class="sr-only">Menu</span>
     </button>
   
     <nav>
       <ul id="primary-nav" data-visible="false" class="primary-nav flex">
-        <li class="active">
-          <a href="index.html" class="text-black text-size-1p5">Home</a>
+        <li>
+          <a href="/home" class="text-black text-size-1p5">Home</a>
         </li>
         <li>
           {{#if loggedIn}}
           <button class="no-button" id="logout">Logout</button>
           {{else}}
-          <a href="login.html" class="text-black text-size-1p5">Login</a>
+          <a href="/login" class="text-black text-size-1p5">Login</a>
           {{/if}}
         </li>
         <li>
-          <a href="account.html" class="text-black text-size-1p5">Account</a>
+          <a href="/dashboard" class="text-black text-size-1p5">Dashboard</a>
         </li>
       </ul>
     </nav>
@@ -42,7 +42,7 @@
   <main class="container">{{{body}}}</main>
 
   {{#if loggedIn}}
-  <script src="../../public//js/logout.js"></script>
+  <script src="../../public/js/logout.js"></script>
   {{/if}}
 </body>
 </html>

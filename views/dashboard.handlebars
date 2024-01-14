@@ -3,10 +3,10 @@
 </div>
 
 <div>
-  <section class="col-md-6">
+  <section>
     <h3>New Post</h3>
 
-    <form>
+    <form class="new-blogpost-form">
       <div>
         <label for="post-title">Title</label>
         <input class="form-input" type="text" id="post-title" name="post-title" />
@@ -22,16 +22,23 @@
   </section>
 
   {{if blogPosts.length}}
-  <div>
+  <div class="blogpost-list">
     <h3>My Posts</h3>
+
     {{#each blogPosts as |blogPost|}}
     <article>
-      <h2 class="title">{{blogPost.title}}</h2>
-      <p id="timestamp">{{blogPost.timestamp}}</p>
+      <h2>
+        <a href="/blogpost/{{blogPost.id}}">{{blogPost.title}}</a>
+      </h2>
+
+      <div>
+        <p>Created on: {{format_date blogPost.timestamp}}</p>
+      </div>
+
+      <div>
+        <button data-id="{{blogPost.id}}">Delete Post</button>
+      </div>
     </article>
-    <div>
-      <button data-id="{{blogPost.id}}">Delete Post</button>
-    </div>
     {{/each}}
   </div>
   {{/if}}

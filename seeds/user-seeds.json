@@ -1,0 +1,27 @@
+[
+  {
+    "name": "NotCoolDude",
+    "email": "notcooldude@example.com",
+    "password": ""
+  },
+  {
+    "name": "colourblind",
+    "email": "",
+    "password": "colourblind@example.com"
+  },
+  {
+    "name": "SusieSingsSongs",
+    "email": "",
+    "password": "susiesingssongs@example.com"
+  },
+  {
+    "name": "TinfoilTom",
+    "email": "",
+    "password": "tinfoiltom@example.com"
+  },
+  {
+    "name": "gramama123",
+    "email": "",
+    "password": "gramama123@example.com"
+  }
+]

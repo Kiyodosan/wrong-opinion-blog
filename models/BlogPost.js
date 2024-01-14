@@ -15,6 +15,7 @@ BlogPost.init(
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
     },
     title: {
       type: DataTypes.STRING,
@@ -26,14 +27,8 @@ BlogPost.init(
     },
     timestamp: {
       type: DataTypes.DATE,
-      //// Test DataTypes.NOW and see if it works as current date, otherwise find way to add current date
       defaultValue: DataTypes.NOW,
     },
-/*     // Might add a "make public" button, but need to have everything else working first.
-    isPublic: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false,
-    }, */
     user_id: {
       type: DataTypes.STRING,
       references: {

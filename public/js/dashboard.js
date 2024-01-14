@@ -25,7 +25,7 @@ const delPostHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/dashboard/${id}`, {
+    const response = await fetch(`/api/blogpost/${id}`, {
       method: 'DELETE',
     });
 
@@ -38,9 +38,9 @@ const delPostHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-project-form')
+  .querySelector('.new-blogpost-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('.blogpost-list')
   .addEventListener('click', delPostHandler);

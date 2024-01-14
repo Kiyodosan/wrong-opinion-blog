@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // Get all blog posts and JOIN with user data
     const blogPostData = await BlogPost.findAll({
       include: [
         {
@@ -12,10 +12,6 @@ router.get('/', async (req, res) => {
           attributes: ['name'],
         },
       ],
-/*       //// Trying to select only posts that are made public
-      where: {
-        isPublic: true,
-      } */
     });
 
     // Serialize data so the template can read it
@@ -59,7 +55,12 @@ router.get('/dashboard', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: BlogPost }],
+      // Only select blog posts made by the user
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
     });
 
     const user = userData.get({ plain: true });

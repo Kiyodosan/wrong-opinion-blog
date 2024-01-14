@@ -5,10 +5,14 @@
   
   {{#each blogPosts as |blogPost|}}
   <article>
-    <h2 class="title">{{blogPost.title}}</h2>
-    <p id="timestamp">{{blogPost.timestamp}}</p>
+    <h2>
+      <a href="/blogpost/{{blogPost.id}}">{{blogPost.title}}</a>
+    </h2>
+
+    <div>
+      <p>Created by: {{blogPost.user.name}}</p>
+      <p>Created on: {{format_date blogPost.timestamp}}</p>
+    </div>
   </article>
   {{/each}}
 </section>
-
-<script src="../public/js/show-post.js"></script>

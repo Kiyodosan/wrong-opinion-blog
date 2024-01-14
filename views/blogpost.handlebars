@@ -1,10 +1,14 @@
 <article>
-  <h2 class="title">{{blogPost.title}}</h2>
-  <p class="content">{{blogPost.content}}</p>
-  {{!-- Need to find a way to reference username using BlogPost's foreign key association with User --}}
-  <p class="username">{{blogPost.username}}</p>
-  <p id="timestamp">{{blogPost.timestamp}}</p>
-</article>
+  <div>
+    <h2 class="title">{{blogPost.title}}</h2>
+  </div>
 
-{{!-- might need to add .js to the src path --}}
-<script src="/js/comment-post"></script>
+  <div>
+    <p class="content">{{blogPost.content}}</p>
+  </div>
+
+  <div>
+    <p class="username">Created by: {{blogPost.user.name}}</p>
+    <p id="timestamp">Created on: {{format_date blogPost.timestamp}}</p>
+  </div>
+</article>
