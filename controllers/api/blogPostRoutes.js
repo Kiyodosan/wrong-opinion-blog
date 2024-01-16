@@ -6,10 +6,11 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const newBlogPost = await BlogPost.create({
       ...req.body,
+      // req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newBlogPost);
+    res.json(newBlogPost);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -29,7 +30,7 @@ router.delete('/:id', withAuth, async (req, res) => {
       return;
     }
 
-    res.status(200).json(blogPostdata);
+    res.json(blogPostdata);
   } catch (err) {
     res.status(500).json(err);
   }

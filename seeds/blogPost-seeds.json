@@ -1,22 +1,27 @@
 [
   {
     "title": "Forever doesn't mean forever",
-    "content": "It always ends"
+    "content": "It always ends",
+    "timestamp": "2022-01-10"
   },
   {
     "title": "black is white",
-    "content": "it's definitely the same color -- gray"
+    "content": "it's definitely the same color -- gray",
+    "timestamp": "2023-02-20"
   },
   {
     "title": "LOVE! What is it good for?",
-    "content": "absolutely nothing"
+    "content": "absolutely nothing",
+    "timestamp": "2023-03-30"
   },
   {
     "title": "cOnSpIrAcY tHeOrIeS aReN't ReAl",
-    "content": "that's just what they want you to think. WAKE UP, SHEEPLE!"
+    "content": "that's just what they want you to think. WAKE UP, SHEEPLE!",
+    "timestamp": "2021-04-05"
   },
   {
     "title": "how to cook brisket",
-    "content": "am i googling this correctly?"
+    "content": "am i googling this correctly?",
+    "timestamp": "2020-10-23"
   }
 ]

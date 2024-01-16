@@ -41,7 +41,8 @@ router.get('/blogpost/:id', async (req, res) => {
     const blogPost = blogPostData.get({ plain: true });
 
     res.render('blogpost', {
-      ...blogPost,
+      // ...blogPost,
+      blogPost,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -66,7 +67,8 @@ router.get('/dashboard', withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
 
     res.render('dashboard', {
-      ...user,
+      // ...user,
+      user,
       logged_in: true
     });
   } catch (err) {
