@@ -5,17 +5,11 @@ class BlogPost extends Model {}
 
 BlogPost.init(
   {
-/*     id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    }, */
-    //// Currently testing UUID instead of auto incremented ID
-    id: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
-      primaryKey: true,
     },
     title: {
       type: DataTypes.STRING,
@@ -30,7 +24,7 @@ BlogPost.init(
       defaultValue: DataTypes.NOW,
     },
     user_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
