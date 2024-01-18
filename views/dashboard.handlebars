@@ -1,8 +1,6 @@
 <div>
   <h1>Dashboard</h1>
-</div>
 
-<div>
   <section>
     <h3>New Post</h3>
 
@@ -21,8 +19,8 @@
     </form>
   </section>
 
-  {{if blogPosts.length}}
-  <div class="blogpost-list">
+  {{!-- {{if blogPosts.length}} --}}
+  <section class="blogpost-list">
     <h3>My Posts</h3>
 
     {{#each blogPosts as |blogPost|}}
@@ -40,8 +38,8 @@
       </div>
     </article>
     {{/each}}
-  </div>
-  {{/if}}
+  </section>
+  {{!-- {{/if}} --}}
 </div>
 
-<script src="../public/js/dashboard.js"></script>
+<script src="./js/dashboard.js"></script>
