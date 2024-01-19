@@ -1,5 +1,5 @@
 
-# wrong-opinion-blog
+# Wrong Opinion Blog
 
 ---
 
@@ -19,7 +19,7 @@ The Wrong Opinion Blog is a demo blog site that lets users share posts with othe
 
 Click on the following image to view the demo video:
 
-[![wrong opinion blog - demo](<assets/images/>)](https://drive.google.com/file/d/)
+[![Wrong Opinion Blog - demo](<assets/images/wrong opinion blog - demo image.png>)](https://drive.google.com/file/d/1g2vCSisooEBiXquZwb1n2RAsKcpufP7b/view?usp=drive_link)
 
 Make sure Node.js is installed on your device. You can open the command terminal and enter "node -v" to check if node is installed. If the command terminal responds back with a version of Node, then it is installed. Otherwise, go to https://nodejs.org/en/download/ and download the LTS version of Node for the appropriate OS that you are using (Windows, Mac, Linux, etc.).
 

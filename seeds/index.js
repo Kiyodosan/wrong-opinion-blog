@@ -19,11 +19,6 @@ const seedDatabase = async () => {
     });
   }
 
-/*   await BlogPost.bulkCreate(blogPostData, {
-    individualHooks: true,
-    returning: true,
-  }); */
-
   process.exit(0);
 };
 

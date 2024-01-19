@@ -19,6 +19,8 @@ User.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      // Test to create users without a name. Requires removal of name check in login.js to make it work.
+      // defaultValue: "User",
     },
     email: {
       type: DataTypes.STRING,
@@ -32,7 +34,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        len: [8, 100],
       },
     },
   },
