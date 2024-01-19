@@ -41,6 +41,7 @@ router.get('/blogpost/:id', async (req, res) => {
     const blogPost = blogPostData.get({ plain: true });
 
     res.render('blogpost', {
+      //// figure out why ...blogPost doesn't work, but blogPost does
       // ...blogPost,
       blogPost,
       logged_in: req.session.logged_in
@@ -58,17 +59,16 @@ router.get('/dashboard', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [{ model: BlogPost }],
       // Only select blog posts made by the user
-      where: {
+/*       where: {
         id: req.params.id,
         user_id: req.session.user_id,
-      },
+      }, */
     });
 
     const user = userData.get({ plain: true });
 
     res.render('dashboard', {
-      // ...user,
-      user,
+      ...user,
       logged_in: true
     });
   } catch (err) {
