@@ -1,16 +1,16 @@
 <div>
-  <h1>Dashboard</h1>
+  <h1 class="text-black">Dashboard</h1>
 
   <section>
-    <h3>New Post</h3>
+    <h3 class="text-black">New Post</h3>
 
     <form class="new-blogpost-form">
       <div>
-        <label for="post-title">Title</label>
+        <label for="post-title" class="text-black">Title</label>
         <input type="text" id="post-title" name="post-title" />
       </div>
       <div>
-        <label for="post-content">Content</label>
+        <label for="post-content" class="text-black">Content</label>
         <textarea id="post-content" name="post-content"></textarea>
       </div>
       <div>
@@ -21,7 +21,7 @@
 
   {{#if blogPosts.length}}
   <section class="blogpost-list">
-    <h3>My Posts</h3>
+    <h3 class="text-black">My Posts</h3>
 
     {{#each blogPosts as |blogPost|}}
     <article>
