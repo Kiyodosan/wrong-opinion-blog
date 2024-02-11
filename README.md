@@ -21,10 +21,6 @@ Click on the following image to visit the site:
 
 [![Wrong Opinion Blog - demo](</public/assets/images/wrong opinion blog - demo image.png>)](https://wrong-opinion-blog-7a019de71561.herokuapp.com/)
 
-Make sure Node.js is installed on your device. You can open the command terminal and enter "node -v" to check if node is installed. If the command terminal responds back with a version of Node, then it is installed. Otherwise, go to https://nodejs.org/en/download/ and download the LTS version of Node for the appropriate OS that you are using (Windows, Mac, Linux, etc.).
-
-Open the command terminal. Enter "npm run seed" to refresh the tables in the database with their default data. Then enter "npm start" to initiate the program.
-
 ## How to use this project
 
 After initiating the program, you can open a browser and navigate to the home page from localhost:3001. From here, you can use the navbar at the top to revisit the home page, login / sign up, or manage your own posts via the dashboard if you are already logged in. If the dashboard link is clicked while you are not logged in, you will be redirected to the login page.
