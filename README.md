@@ -19,7 +19,7 @@ The Wrong Opinion Blog is a demo blog site that lets users share posts with othe
 
 Click on the following image to visit the site:
 
-[![Wrong Opinion Blog - demo](</public/assets/images/wrong opinion blog - demo image.png>)](https://wrong-opinion-blog-7a019de71561.herokuapp.com/)
+[![Wrong Opinion Blog - demo](</public/assets/images/wrong opinion blog - demo image.png>)](https://wrongopinionblog.onrender.com)
 
 ## How to use this project
 
